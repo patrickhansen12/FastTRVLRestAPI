@@ -1,0 +1,14 @@
+language: csharp
+mono: none
+dotnet: 5.0
+dist: xenial
+
+  
+install:
+- dotnet restore RestAPI.sln
+script:
+- dotnet build RestAPI.sln
+branches:
+  only:
+  - master
+  - development
